@@ -7,6 +7,13 @@
 **SwipeCardPager**
 A **Swipe Card Pager** library for Android in Kotlin, **supporting horizontal & vertical swipe, customizable tilt direction, and stacked card animations**. Users can display any content (images, text, videos, or custom views) inside cards and make their UI interactive like popular dating apps.
 ---
+## Preview
+
+![Preview 1](assets/image1.jpg)
+
+---
+
+
 **Features**
 
 Swipe cards horizontally (stacked/fanned) or vertically (simple swipe).
