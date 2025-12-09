@@ -50,7 +50,7 @@ afterEvaluate {
 
                 groupId = "com.github.Excelsior-Technologies-Community"    // replace
                 artifactId = "swipeviewpager"             // artifact name to publish
-                version = "1.0.1"                        // when using branch, version can be the branch name
+                version = "1.0.0"                        // when using branch, version can be the branch name
             }
         }
     }
