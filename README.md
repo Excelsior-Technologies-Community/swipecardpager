@@ -10,6 +10,7 @@ A **Swipe Card Pager** library for Android in Kotlin, **supporting horizontal & 
 ## Preview
 
 ![Preview 1](assets/image1.jpg)
+![Preview 1](assets/image2.jpg)
 
 ---
 
