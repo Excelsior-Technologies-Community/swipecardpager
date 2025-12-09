@@ -9,13 +9,39 @@ A **Swipe Card Pager** library for Android in Kotlin, **supporting horizontal & 
 ---
 ## Preview
 
-![Preview 1](assets/image1.jpg)
-![Preview 1](assets/image2.jpg)
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/image3.jpg"
+           style="height: 480px; width: 100%; object-fit: contain;"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/image2.jpg"
+           style="height: 480px; width: 100%; object-fit: contain;"/>
+    </td>
+  </tr>
+</table>
+
+
 
 ---
 
 ## 🎥 Demo
-![Demo](assets/card.gif)
+<table width="100%">
+  <tr>
+    <th width="50%">Demo 1</th>
+    <th width="50%">Demo 2</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/demo.gif" height="320" style="max-width: 100%;"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/demo1.gif" height="320" style="max-width: 100%;"/>
+    </td>
+  </tr>
+</table>
+
 
 ---
 
