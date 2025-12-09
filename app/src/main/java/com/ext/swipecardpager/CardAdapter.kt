@@ -24,4 +24,10 @@ class CardAdapter(private val list: MutableList<String>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text.text = list[position]
     }
+    fun removeItem(position: Int) {
+        if (position >= 0 && position < list.size) {
+            list.removeAt(position)
+            notifyDataSetChanged()
+        }
+    }
 }

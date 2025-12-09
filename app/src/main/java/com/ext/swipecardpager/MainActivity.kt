@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.ext.swipeviewpager.OnItemSwipedListener
 import com.ext.swipeviewpager.PivotPosition
 import com.ext.swipeviewpager.SwipeCardView
 import com.ext.swipeviewpager.SwipeOrientation
@@ -38,6 +39,11 @@ class MainActivity : AppCompatActivity() {
         swipeView.setTiltDirection(TiltDirection.LEFT)
         swipeView.setPivotPosition(PivotPosition.TOP)
         swipeView.setAdapter(adapter)
+        swipeView.setOnItemSwipedListener(object : OnItemSwipedListener {
+            override fun onItemSwiped(position: Int, direction: Int) {
+                adapter.removeItem(position)
+            }
+        })
 
     }
 }

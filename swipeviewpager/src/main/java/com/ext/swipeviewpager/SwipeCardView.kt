@@ -24,7 +24,7 @@ class SwipeCardView @JvmOverloads constructor(
     private var scaleOffset = 0.05f
     private var tiltDirection: TiltDirection = TiltDirection.LEFT  // default tilt
     private var pivotPosition: PivotPosition = PivotPosition.BOTTOM // default current behavior
-
+    private var swipeListener: OnItemSwipedListener? = null
     init {
         val view = LayoutInflater.from(context)
             .inflate(R.layout.view_swipe_card, this, true)
@@ -56,6 +56,7 @@ class SwipeCardView @JvmOverloads constructor(
     }
 
     private fun setupRecyclerView() {
+        recyclerView.itemAnimator = null
         if (orientation == SwipeOrientation.VERTICAL) {
             recyclerView.layoutManager = LinearLayoutManager(context)
             enableVerticalSwipe()
@@ -72,7 +73,17 @@ class SwipeCardView @JvmOverloads constructor(
         ) {
             override fun onMove(rv: RecyclerView, vh: RecyclerView.ViewHolder, t: RecyclerView.ViewHolder) = false
             override fun onSwiped(vh: RecyclerView.ViewHolder, dir: Int) {
-                recyclerView.adapter?.notifyItemRemoved(vh.adapterPosition)
+                vh.itemView.clearAnimation()
+                vh.itemView.translationX = 0f
+                vh.itemView.translationY = 0f
+                vh.itemView.alpha = 1f
+
+                swipeListener?.onItemSwiped(vh.adapterPosition, dir)
+
+                recyclerView.post {
+                    recyclerView.invalidate()
+                    recyclerView.requestLayout()
+                }
             }
         })
         helper.attachToRecyclerView(recyclerView)
@@ -107,9 +118,24 @@ class SwipeCardView @JvmOverloads constructor(
             }
 
             override fun onSwiped(vh: RecyclerView.ViewHolder, dir: Int) {
-                recyclerView.adapter?.notifyItemRemoved(vh.adapterPosition)
+                vh.itemView.clearAnimation()
+                vh.itemView.translationX = 0f
+                vh.itemView.translationY = 0f
+                vh.itemView.alpha = 1f
+
+                swipeListener?.onItemSwiped(vh.adapterPosition, dir)
+
+                recyclerView.post {
+                    recyclerView.invalidate()
+                    recyclerView.requestLayout()
+                }
             }
+
         })
         helper.attachToRecyclerView(recyclerView)
     }
+    fun setOnItemSwipedListener(listener: OnItemSwipedListener) {
+        swipeListener = listener
+    }
+
 }
