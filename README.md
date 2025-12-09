@@ -42,7 +42,7 @@ Easy to integrate with just one custom view.
 Add Dependency
 ```
 dependencies {
-	        implementation("com.github.Excelsior-Technologies-Community:swipecardpager:v1.0.0")
+	        implementation("com.github.Excelsior-Technologies-Community:swipecardpager:1.0.0")
 	}
 ```
 ---
