@@ -62,9 +62,8 @@ Smooth swipe animations with stacked card effect.
 Easy to integrate with just one custom view.
 
 ---
-**Screenshots**
----
-**Installation**
+
+## Installation
 
 Add Dependency
 ```
