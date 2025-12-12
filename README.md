@@ -1,11 +1,12 @@
-**SwipeCardPager**
+## SwipeCardPager
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![API](https://img.shields.io/badge/API-24%2B-orange)](#)
 ---
-**SwipeCardPager**
-A **Swipe Card Pager** library for Android in Kotlin, **supporting horizontal & vertical swipe, customizable tilt direction, and stacked card animations**. Users can display any content (images, text, videos, or custom views) inside cards and make their UI interactive like popular dating apps.
+
+A **Swipe Card Pager** library for Android in Kotlin, **`supporting horizontal & vertical swipe`, `customizable tilt direction`, and stacked card animations**. Users can display any content (images, text, videos, or custom views) inside cards and make their UI interactive like popular dating apps.
+
 ---
 ## Preview
 
